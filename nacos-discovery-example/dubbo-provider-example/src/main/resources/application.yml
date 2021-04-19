@@ -1,0 +1,35 @@
+server:
+  port: 8070
+
+spring:
+  application:
+    name: service-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        group: example-group
+
+dubbo:
+  scan:
+    base-packages: org.example.provider.provider
+  protocol:
+    name: dubbo
+    port: 40003
+#    serialization: kryo
+  provider:
+    retries : 0
+    threads : 100
+    timeout : 40000
+    loadbalance : random
+    group : example-group
+    check: false
+#    filter: DubboExceptionFilter,-exception
+  registry:
+    address: nacos://127.0.0.1:8848
+#  consumer:
+#    timeout: 40000
+#    group: example-group
+#    check: false
+#  cloud:
+#    subscribed-services: gurfcc-file,gurfcc-user

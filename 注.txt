@@ -1,0 +1,53 @@
+本工程测试 nacos+dubbo
+1.从配置中心获取配置
+2.服务注册发现和服务调用
+
+nacos-dubbo-example工程
+测试从配置中心获取配置
+
+nacos-dubbo-example工程
+测试服务注册发现和服务调用
+
+这里有个坑：
+以下两个包groupId是不同的：
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+</dependency>
+
+<dependency>
+    <groupId>com.alibaba.cloud</groupId>
+    <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+</dependency>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
